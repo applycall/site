@@ -93,32 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Form submission simulation (for local testing only)
-    const demoForm = document.querySelector('.demo-form');
-    if (demoForm) {
-        demoForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            const submitButton = this.querySelector('button[type="submit"]');
-            submitButton.disabled = true;
-            submitButton.textContent = 'Submitting...';
-
-            setTimeout(() => {
-                const successMessage = document.createElement('div');
-                successMessage.textContent = 'Thank you! We\'ll be in touch soon.';
-                successMessage.style.backgroundColor = 'var(--secondary-color)';
-                successMessage.style.color = 'white';
-                successMessage.style.padding = '1rem';
-                successMessage.style.borderRadius = 'var(--radius)';
-                successMessage.style.marginTop = '1rem';
-                successMessage.style.textAlign = 'center';
-
-                demoForm.innerHTML = '';
-                demoForm.appendChild(successMessage);
-            }, 2000);
-        });
-    }
-
+    
     // Show success message if redirected via #form-success
     if (window.location.hash === '#form-success') {
         const form = document.querySelector('.demo-form');
