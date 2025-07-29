@@ -159,34 +159,4 @@ document.addEventListener('DOMContentLoaded', function() {
     if ('IntersectionObserver' in window) {
         animateOnScroll();
     }
-   document.addEventListener('DOMContentLoaded', function () {
-    const anchor = window.location.hash;
-
-    if (anchor === '#form-success') {
-        const successContainer = document.querySelector('#form-success');
-        const form = document.querySelector('.demo-form');
-
-        if (successContainer && form) {
-            // Hide the form
-            form.style.display = 'none';
-
-            // Show the thank you message
-            successContainer.innerHTML = `
-                <div class="thank-you-message" style="
-                    background: var(--secondary-color);
-                    color: white;
-                    padding: 1rem;
-                    border-radius: var(--radius);
-                    margin-top: 1rem;
-                    text-align: center;
-                ">
-                    Thank you! We'll be in touch soon.
-                </div>
-            `;
-
-            // Optional scroll into view
-            successContainer.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
-});
 });
