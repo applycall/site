@@ -654,6 +654,11 @@ select {
     padding-right: 2.5rem;
 }
 
+option {
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+}
+
 textarea {
     min-height: 120px;
     resize: vertical;
