@@ -151,27 +151,33 @@ header {
 }
 
 .announcement-banner {
-    background-color: var(--secondary-color);
-    color: var(--text-white);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem 2rem 0;
     text-align: center;
-    padding: 0.85rem 1rem;
 }
 
 .announcement-banner p {
+    display: inline-block;
     margin-bottom: 0;
-    color: var(--text-white);
+    padding: 0.85rem 1.5rem;
+    color: rgba(255, 255, 255, 0.92);
     font-weight: 500;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(129, 140, 248, 0.35);
+    border-radius: 999px;
+    box-shadow: var(--shadow-sm);
+    backdrop-filter: blur(8px);
 }
 
 .announcement-banner a {
-    color: var(--text-white);
+    color: var(--primary-light);
     text-decoration: underline;
-    text-underline-offset: 0.15rem;
+    text-underline-offset: 0.2rem;
 }
 
 .announcement-banner a:hover {
-    color: var(--bg-white);
-    opacity: 0.9;
+    color: var(--text-white);
 }
 
 nav {
